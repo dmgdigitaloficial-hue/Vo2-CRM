@@ -782,11 +782,11 @@ function showV(v,btn){
   if(btn)btn.classList.add('act');
   const titles={pipe:'Pipeline de Vendas',leads:'Todos os Leads',alerts:'Follow-ups & Alertas',funil:'Funil & Métricas',sett:'Produtos & Configurações'};
   document.getElementById('ptxt').textContent=titles[v]||'';
-  document.getElementById('pv').style.display     =v==='pipe'  ?'':'none';
-  document.getElementById('lv').style.display     =v==='leads' ?'':'none';
-  document.getElementById('alertv').style.display =v==='alerts'?'':'none';
-  document.getElementById('fv').style.display     =v==='funil' ?'':'none';
-  document.getElementById('sv').style.display     =v==='sett'  ?'':'none';
+  document.getElementById('pv').style.display     =v==='pipe'  ?'block':'none';
+  document.getElementById('lv').style.display     =v==='leads' ?'block':'none';
+  document.getElementById('alertv').style.display =v==='alerts'?'block':'none';
+  document.getElementById('fv').style.display     =v==='funil' ?'block':'none';
+  document.getElementById('sv').style.display     =v==='sett'  ?'block':'none';
   if(v==='leads') buildTable();
   if(v==='alerts')buildAlerts();
   if(v==='funil') buildFunil();
